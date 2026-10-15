@@ -1,0 +1,16 @@
+@if (news().isLoading()) {
+  <app-loader />
+} @else if (news().error()) {
+  <div class="message">
+    <p>Не вдалося завантажити новини. Спробуйте пізніше.</p>
+    <button appButton type="button" (click)="news().reload()">Спробувати ще</button>
+  </div>
+} @else if (news().value()?.articles?.length) {
+  <div class="grid">
+    @for (article of news().value()!.articles; track article.id) {
+      <app-news-card [article]="article" />
+    }
+  </div>
+} @else {
+  <p class="message">Новин поки немає.</p>
+}
