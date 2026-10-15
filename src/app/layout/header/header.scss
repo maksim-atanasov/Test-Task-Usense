@@ -33,13 +33,29 @@
 .headerMain {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   min-height: 96px;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @include onTablet {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+}
+
+.nav {
+  @include onTablet {
+    margin: 0 -12px;
+  }
 }
 
 .logo {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 14px;
   color: var(--color-heading);
