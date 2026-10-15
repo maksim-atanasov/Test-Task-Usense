@@ -1,0 +1,67 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.topBar {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+}
+
+.topBarInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.date::first-letter {
+  text-transform: uppercase;
+}
+
+.slogan {
+  @include onMobile {
+    display: none;
+  }
+}
+
+.headerMain {
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-heading);
+
+  &:hover {
+    color: var(--color-heading);
+  }
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logoTagline {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
