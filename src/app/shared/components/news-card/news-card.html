@@ -1,0 +1,22 @@
+<a class="link" [routerLink]="['/news', article().id]">
+  <div class="image">
+    @if (article().image && !imageFailed()) {
+      <img
+        [src]="article().image"
+        [alt]="article().title"
+        loading="lazy"
+        (error)="imageFailed.set(true)"
+      />
+    } @else {
+      <app-logo-icon [size]="64" [background]="'#ebebeb'" />
+    }
+  </div>
+
+  <div class="meta">
+    <span>{{ article().source.name }}</span>
+    <span>{{ article().publishedAt | date: 'd MMMM y, HH:mm' }}</span>
+  </div>
+
+  <h3 class="title">{{ article().title }}</h3>
+  <p class="description">{{ article().description }}</p>
+</a>

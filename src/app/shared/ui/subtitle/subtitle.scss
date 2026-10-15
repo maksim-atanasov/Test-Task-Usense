@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  font-size: 18px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--color-primary);
+  }
+}

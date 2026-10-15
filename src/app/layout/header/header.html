@@ -1,0 +1,18 @@
+<div class="topBar">
+  <app-container class="topBarInner">
+    <span class="date">{{ today | date: 'EEEE, d MMMM y' }}</span>
+    <app-search-form class="search" />
+  </app-container>
+</div>
+
+<app-container class="headerMain">
+  <a class="logo" routerLink="/">
+    <app-logo-icon [size]="48" />
+    <span class="logoText">
+      <span class="logoTitle">Новини світу</span>
+      <span class="logoTagline">Стрічка останніх новин</span>
+    </span>
+  </a>
+
+  <app-category-nav class="nav" />
+</app-container>

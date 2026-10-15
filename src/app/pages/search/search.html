@@ -1,0 +1,10 @@
+<app-container class="page">
+  <h1 appTitle>
+    @if (query()) {
+      Результати пошуку: «{{ query() }}»
+    } @else {
+      Пошук
+    }
+  </h1>
+  <app-news-list [news]="news" [emptyText]="emptyText()" />
+</app-container>

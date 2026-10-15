@@ -1,0 +1,14 @@
+<nav class="nav" #nav>
+  @for (category of categories; track category) {
+    <a
+      #link
+      class="link"
+      [routerLink]="category === general ? '/' : ['/category', category]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (isActiveChange)="$event && scrollToLink(nav, link)"
+    >
+      {{ labels[category] }}
+    </a>
+  }
+</nav>

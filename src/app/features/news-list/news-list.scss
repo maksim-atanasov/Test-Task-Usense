@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include onMobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.message {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
