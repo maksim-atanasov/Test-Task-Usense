@@ -18,23 +18,6 @@
   }
 }
 
-.title {
-  position: relative;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  font-size: 18px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: var(--color-primary);
-  }
-}
-
 .column p {
   font-size: 14px;
 }
@@ -42,6 +25,6 @@
 .bottomBar {
   padding: 18px 0;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-on-dark);
   background: var(--color-dark);
 }
