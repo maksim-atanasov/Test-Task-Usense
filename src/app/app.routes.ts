@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/search/search').then((m) => m.Search),
   },
   {
+    path: 'news/:id',
+    loadComponent: () => import('./pages/news-details/news-details').then((m) => m.NewsDetails),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
