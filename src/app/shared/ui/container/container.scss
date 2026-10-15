@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include onMobile {
+    padding: 0 16px;
+  }
+}
