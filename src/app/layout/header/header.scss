@@ -14,19 +14,28 @@
 
 .topBarInner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.date::first-letter {
-  text-transform: uppercase;
-}
+.date {
+  &::first-letter {
+    text-transform: uppercase;
+  }
 
-.slogan {
   @include onMobile {
     display: none;
+  }
+}
+
+.search {
+  width: 280px;
+
+  @include onMobile {
+    width: 100%;
   }
 }
 

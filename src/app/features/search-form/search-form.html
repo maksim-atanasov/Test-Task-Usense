@@ -1,0 +1,12 @@
+<form class="form" role="search" [formRoot]="searchForm">
+  <input
+    class="input"
+    type="search"
+    placeholder="Пошук новин"
+    aria-label="Пошук новин"
+    [formField]="searchForm.query"
+  />
+  <button class="submit" type="submit" aria-label="Шукати">
+    <app-search-icon />
+  </button>
+</form>
