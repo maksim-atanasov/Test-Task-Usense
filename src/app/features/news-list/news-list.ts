@@ -13,4 +13,5 @@ import { Button } from '../../shared/ui/button/button';
 })
 export class NewsList {
   readonly news = input.required<HttpResourceRef<ArticlesResponse | undefined>>();
+  readonly emptyText = input('Новин поки немає.');
 }

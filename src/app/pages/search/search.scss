@@ -1,0 +1,11 @@
+@use 'mixins' as *;
+
+.page {
+  padding-top: 48px;
+  padding-bottom: 64px;
+
+  @include onMobile {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+}
